@@ -89,8 +89,8 @@ def menu(input='nothing',stage='0'):
             app_choice = int(con)
             target_app = app_choices[app_choice]
             menu(target_app,"2")
-        except:
-            print "Invalid Entry."
+        except Exception as e:
+            print "Invalid Entry: {0}".format(e)
             sys.exit(1)
         ###################################################################
         #Stage 2
@@ -103,8 +103,8 @@ def menu(input='nothing',stage='0'):
         try:
             print predefine_osa[choice]
             os.system("echo "+predefine_osa[choice])
-        except:
-            print "Error"
+        except Exception as e:
+            print "Error: {0}".format(e)
     elif stage=="2":
         print "--Enter text you want to prompt the user with, press enter for a generic prompt--"
         dialog1 = raw_input(">> ")
