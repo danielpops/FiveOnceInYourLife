@@ -101,6 +101,7 @@ def menu(input='nothing',stage='0'):
         print '--Enter number for osascript you want to use--'
         choice = raw_input('>> ')
         try:
+            choice = int(choice)
             print predefine_osa[choice]
             os.system("echo "+predefine_osa[choice])
         except:
